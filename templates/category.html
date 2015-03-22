@@ -1,0 +1,55 @@
+{% extends 'base/base.html' %}
+{% block contents %}
+						{% for blog in blogs %}
+						<!-- Start Post -->
+						<div class="blog-post standard-post">
+							<!-- Post Content -->
+							<div class="post-content">
+								<div class="post-type"><i class="fa fa-pencil"></i></div>
+								<h2><a href="{{ blog.get_absolute_url }}">{{ blog.title }}</a></h2>
+								<ul class="post-meta">
+									<li>By <a href="#">iThemesLab</a></li>
+									<li>{{ blog.date }} , {{ blog.time }}</li>
+									<li><a href="#">WordPress</a>, <a href="#">Graphic</a></li>
+									<li><a href="#">4 Comments</a></li>
+								</ul>
+
+								<ul class="post-meta">
+								<li>
+									<a class="facebook itl-tooltip" data-placement="bottom" title="Facebook" href="#"><i class="fa fa-facebook"></i></a>
+								</li>
+								<li>
+									<a class="twitter itl-tooltip" data-placement="bottom" title="Twitter" href="#"><i class="fa fa-twitter"></i></a>
+								</li>
+								<li>
+									<a class="google itl-tooltip" data-placement="bottom" title="Google Plus" href="#"><i class="fa fa-google-plus"></i></a>
+								</li>
+								
+							</ul>
+
+
+
+								<p>{{blog.body|safe|escape|truncatewords_html:35}}</p>
+
+								<a class="main-button" href="{{ blog.get_absolute_url }}">Read More <i class="fa fa-angle-right"></i></a>
+							</div>
+						</div>
+						<!-- End Post -->
+                        {% endfor %}
+
+
+
+						
+						<!-- Start Pagination -->
+                        <!--
+						<div id="pagination">
+							<span class="all-pages">Page 1 of 3</span>
+							<span class="current page-num">1</span>
+							<a class="page-num" href="#">2</a>
+							<a class="page-num" href="#">3</a>
+							<a class="next-page" href="#">Next</a>
+						</div>
+						-->
+						<!-- End Pagination -->
+
+{% endblock %}

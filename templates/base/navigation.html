@@ -1,0 +1,166 @@
+{% load staticfiles %}
+<!doctype html>
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><html lang="en" class="no-js"> <![endif]-->
+<html lang="en">
+<head>
+	
+	<!-- Basic -->
+	<title>Kd Johar | Blog</title>
+	
+	<!-- Define Charset -->
+	<meta charset="utf-8">
+	
+	<!-- Responsive Metatag -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Page Description and Author -->
+	<meta name="description" content="Margo - Responsive HTML5 Template">
+	<meta name="author" content="iThemesLab">
+	
+	
+	<!-- Bootstrap CSS  -->
+	<link rel="stylesheet" href='{% static "asset/css/bootstrap.min.css" %}' type="text/css" media="screen">
+
+	<!-- Font Awesome CSS -->
+	<link rel="stylesheet" href='{% static "css/font-awesome.min.css" %}' type="text/css" media="screen">
+	
+	<!-- Margo CSS Styles  -->
+	<link rel="stylesheet" type="text/css" href='{% static "css/style.css" %}' media="screen">
+	
+	<!-- Responsive CSS Styles  -->
+	<link rel="stylesheet" type="text/css" href='{% static "css/responsive.css" %}' media="screen">
+	
+	<!-- Color CSS Styles  -->
+	<link rel="stylesheet" type="text/css" href='{% static "css/colors/orange.css" %}' title="orange" media="screen" />
+	
+	
+	
+	
+	<!-- Margo JS  -->
+    <script type="text/javascript" src='{% static "js/jquery-2.1.1.min.js" %}'></script>
+	<script type="text/javascript" src='{% static "js/jquery.migrate.js" %}'></script>
+	<script type="text/javascript" src='{% static "js/modernizrr.js" %}'></script>
+	<script type="text/javascript" src='{% static "asset/js/bootstrap.min.js" %}'></script>
+	<script type="text/javascript" src='{% static "js/jquery.fitvids.js" %}'></script>
+	<script type="text/javascript" src='{% static "js/owl.carousel.min.js" %}'></script>
+	<script type="text/javascript" src='{% static "js/nivo-lightbox.min.js" %}'></script>
+	<script type="text/javascript" src='{% static "js/jquery.isotope.min.js" %}'></script>
+	<script type="text/javascript" src='{% static "js/jquery.appear.js" %}'></script>
+	<script type="text/javascript" src='{% static "js/count-to.js" %}'></script>
+	<script type="text/javascript" src='{% static "js/jquery.textillate.js" %}'></script>
+	<script type="text/javascript" src='{% static "js/jquery.lettering.js" %}'></script>
+	<script type="text/javascript" src='{% static "js/jquery.easypiechart.min.js" %}'></script>
+	<script type="text/javascript" src='{% static "js/jquery.nicescroll.min.js" %}'></script>
+	<script type="text/javascript" src='{% static "js/jquery.parallax.js" %}'></script>
+	<script type="text/javascript" src='{% static "js/script.js" %}'></script>
+	
+	<!--[if IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+
+	
+</head>
+<body>
+
+	<!-- Container -->
+	<div id="container">
+		
+		<!-- Start Header -->
+		<div class="hidden-header"></div>
+		<header class="clearfix">
+			
+			<!-- Start Top Bar -->
+			<div class="top-bar">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6">
+							<!-- Start Contact Info -->
+							<ul class="contact-details">
+                                
+                                <li><a href=""mailto: kdjohar91@gmail.com""><i class="fa fa-envelope-o"></i> kdjohar91@gmail.com</a>
+                                </li>
+                                
+                            </ul>
+							<!-- End Contact Info -->
+						</div>
+						<div class="col-md-6">
+							<!-- Start Social Links -->
+							<ul class="social-list">
+								<li>
+									<a class="facebook itl-tooltip" data-placement="bottom" title="Facebook" href="https://www.facebook.com/karandeepsingh.johar"><i class="fa fa-facebook"></i></a>
+								</li>
+								<li>
+									<a class="twitter itl-tooltip" data-placement="bottom" title="Twitter" href="https://twitter.com/kdjohar91"><i class="fa fa-twitter"></i></a>
+								</li>
+								<li>
+									<a class="google itl-tooltip" data-placement="bottom" title="Google Plus" href="https://plus.google.com/+KarandeepSinghJohar"><i class="fa fa-google-plus"></i></a>
+								</li>
+								
+								<li>
+									<a class="linkdin itl-tooltip" data-placement="bottom" title="Linkedin" href="https://www.linkedin.com/in/kdjohar"><i class="fa fa-linkedin"></i></a>
+								</li>
+								<!--<li>
+									<a class="flickr itl-tooltip" data-placement="bottom" title="Flickr" href="#"><i class="fa fa-flickr"></i></a>
+								</li>-->
+								
+								<li>
+									<a class="instgram itl-tooltip" data-placement="bottom" title="Instagram" href="https://instagram.com/kd_johar/"><i class="fa fa-instagram"></i></a>
+								</li>
+								
+								<li>
+									<a class="skype itl-tooltip" data-placement="bottom" title="Skype" href="#"><i class="fa fa-skype"></i></a>
+								</li>
+							</ul>
+							<!-- End Social Links -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Top Bar -->
+			
+			<!-- Start Header ( Logo & Naviagtion ) -->
+			<div class="navbar navbar-default navbar-top">
+				<div class="container">
+					<div class="navbar-header">
+						<!-- Stat Toggle Nav Link For Mobiles -->
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+						<!-- End Toggle Nav Link For Mobiles -->
+						<a class="navbar-brand" href="{% url 'home'%}"><img alt="" src='{% static "images/kdjohar.png" %}'></a>
+					</div>
+					<div class="navbar-collapse collapse">
+						
+						<!-- Start Navigation List -->
+						<ul class="nav navbar-nav navbar-right">
+
+							
+							
+							<li>
+								<a class="{{active}}" href="{% url 'home' %}">All Blogs</a>
+								
+							</li>
+
+                            <li>
+								<a class="{{active}}" href="{% url 'category'%}">Category</a>
+								<ul class="dropdown">
+									{% for category in categories %}
+									<li><a href="{{category.get_absolute_url}}">{{category.name}}</a></li>
+
+                                    {% endfor %}
+								</ul>
+							</li>
+
+							<li><a class="{{active}}" href="thought.html">Thoughts</a></li>
+						</ul>
+						<!-- End Navigation List -->
+
+					</div>
+
+				</div>
+			</div>
+			<!-- End Header ( Logo & Naviagtion ) -->
+			
+		</header>
+		<!-- End Header -->

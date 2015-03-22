@@ -1,0 +1,48 @@
+{% extends 'base/base.html' %}
+{% load staticfiles %}
+{% block contents %}
+        <div class="blog-post gallery-post">
+
+      <!-- Start Single Post (Gallery Slider) -->
+
+    <!-- End Single Post (Gallery) -->
+
+    <!-- Start Single Post Content -->
+    <div class="post-content">
+     <div class="post-type"><i class="fa fa-picture-o"></i></div>
+     <h2>{{ blog.title }}</h2>
+     <ul class="post-meta">
+
+       <li>{{blog.date}}</li>
+       <li>{{blog.time}}</li>
+
+     </ul>
+        <br />
+     {{blog.body|safe|escape}}
+
+     <div class="post-bottom clearfix">
+      <div class="post-tags-list">
+        <a href="#">Theme</a>
+        <a href="#">Mobile</a>
+        <a href="#">Design</a>
+        <a href="#">Wordpress</a>
+        <a href="#">Jquery</a>
+      </div>
+      <div class="post-share">
+        <span>Share This Post:</span>
+        <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+        <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+        <a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
+        <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+        <a class="mail" href="#"><i class="fa fa-envelope"></i></a>
+      </div>
+    </div>
+
+ </div>
+ <!-- End Single Post Content -->
+
+
+</div>
+
+{% endblock %}
+
