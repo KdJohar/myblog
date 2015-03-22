@@ -12,3 +12,4 @@ urlpatterns = patterns('',
     (r'^ckeditor/', include('ckeditor.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )
+handler404 = 'views.error_404'

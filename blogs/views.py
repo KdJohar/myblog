@@ -1,6 +1,7 @@
 from django.shortcuts import render_to_response, get_object_or_404
 from django.shortcuts import RequestContext
 from models import Blogs, Categories
+from django.http import Http404
 # Create your views here.
 
 def index(request):
@@ -33,4 +34,17 @@ def blog_view(request, slug):
     blog = get_object_or_404(Blogs, slug=slug)
     page_title = 'blog'+'|'+ ' '+ blog.title
 
+    if blog.publish == True:
+        pass
+    else:
+        raise Http404
+
+
     return render_to_response('blog.html', locals(), context_instance = RequestContext(request))
+
+def error_404(request):
+
+
+    categories = Categories.objects.all()
+    page_title = 'Error - 404'
+    return render_to_response('404.html', locals(), context_instance = RequestContext(request))
