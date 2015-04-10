@@ -1,6 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.conf import settings
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'blogs.views.index', name='home'),
@@ -10,6 +11,14 @@ urlpatterns = patterns('',
     #url(r'(?P<slug>[\w-]+)/^$', 'blogs.views.category_view', name='category'),
     # url(r'^blog/', include('blog.urls')),
     (r'^ckeditor/', include('ckeditor.urls')),
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^kdadmin/', include(admin.site.urls)),
 )
-handler404 = 'views.error_404'
+
+urlpatterns += patterns('', (
+    r'^static/(?P<path>.*)$',
+    'django.views.static.serve',
+    {'document_root': settings.STATIC_ROOT}
+))
+handler404 = 'blogs.views.handler404'
+
+handler500 = 'blogs.views.handler500'
