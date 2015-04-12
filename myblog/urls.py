@@ -19,6 +19,11 @@ urlpatterns += patterns('', (
     'django.views.static.serve',
     {'document_root': settings.STATIC_ROOT}
 ))
+urlpatterns += patterns('', (
+    r'^media/(?P<path>.*)$',
+    'django.views.static.serve',
+    {'document_root': settings.MEDIA_ROOT}
+))
 handler404 = 'blogs.views.handler404'
 
 handler500 = 'blogs.views.handler500'
