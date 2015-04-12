@@ -9,6 +9,8 @@ def index(request):
     blogs = Blogs.objects.all().filter(publish=True)
     categories = Categories.objects.all()
     page_title = 'all blogs'
+    meta_keywords = 'python, linux'
+    meta_description = 'kdjohar personal blogs'
     no = blogs.count()
 
 
@@ -17,6 +19,8 @@ def index(request):
 def category(request):
     page_title = 'all categories'
     categories = Categories.objects.all()
+    meta_keywords = 'python, linux'
+    meta_description = 'kdjohar personal blogs'
 
     return render_to_response('category-list.html', locals(), context_instance = RequestContext(request))
 
@@ -24,6 +28,8 @@ def category_view(request, slug):
     categories = Categories.objects.all()
     category = get_object_or_404(Categories, slug=slug)
     page_title = category.name
+    meta_keywords = 'python, linux'
+    meta_description = 'kdjohar personal blogs'
     blogs = Blogs.objects.filter(category=category).filter(publish=True)
     no = blogs.count()
 

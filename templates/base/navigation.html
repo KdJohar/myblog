@@ -6,7 +6,7 @@
 <head>
 	
 	<!-- Basic -->
-	<title>Kd Johar | Blog</title>
+	<title>Kd Johar | {% if blog.page_title %}{{blog.page_title}} {% else %} {{page_title}}{% endif %}</title>
 	
 	<!-- Define Charset -->
 	<meta charset="utf-8">
@@ -15,8 +15,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	
 	<!-- Page Description and Author -->
-	<meta name="description" content="programming blogs">
+	<meta name="description" content="{% if blog.meta_description %}{{blog.meta_description}} {% else %} {{meta_description}}{% endif %}">
 	<meta name="author" content="Kd johar">
+    <meta name="keywords" content="{% if blog.meta_keywords %}{{blog.meta_keywords}} {% else %} {{meta_keywords}}{% endif %}">
 	
 	
 	<!-- Bootstrap CSS  -->
@@ -24,6 +25,10 @@
 
 	<!-- Font Awesome CSS -->
 	<link rel="stylesheet" href='{% static "css/font-awesome.min.css" %}' type="text/css" media="screen">
+    <link rel="stylesheet" href='{% static "prism/prism.css" %}' type="text/css" media="screen">
+    <link rel="stylesheet" href='{% static "pretty/prettify.css" %}' type="text/css" media="screen">
+    <link href="ckeditor/plugins/codesnippet/lib/highlight/styles/default.css" rel="stylesheet">
+    <script src="ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js"></script>
 	
 	<!-- Margo CSS Styles  -->
 	<link rel="stylesheet" type="text/css" href='{% static "css/style.css" %}' media="screen">
@@ -39,6 +44,8 @@
 	
 	<!-- Margo JS  -->
     <script type="text/javascript" src='{% static "js/jquery-2.1.1.min.js" %}'></script>
+    <script type="text/javascript" src='{% static "prism/prism.js" %}'></script>
+    <script type="text/javascript" src='{% static "pretty/prettify.js" %}'></script>
 	<script type="text/javascript" src='{% static "js/jquery.migrate.js" %}'></script>
 	<script type="text/javascript" src='{% static "js/modernizrr.js" %}'></script>
 	<script type="text/javascript" src='{% static "asset/js/bootstrap.min.js" %}'></script>

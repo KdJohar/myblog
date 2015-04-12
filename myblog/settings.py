@@ -89,6 +89,17 @@ STATIC_URL = '/static/'
 
 
 CKEDITOR_UPLOAD_PATH = "editor_uploads/"
+CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'cms',
+        'height': 500,
+        'width': 1050,
+        'skin': 'moono',
+        'extraPlugins': 'syntaxhighlight,youtube',
+
+    },
+}
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     "django.contrib.auth.context_processors.auth",
