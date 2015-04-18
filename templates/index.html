@@ -239,7 +239,7 @@
                       <div class="card-img-wrap">
 
                         <div class="post-body">
-                          <a href="single.html" class="post-title-link brand-text"><h2 class="post-title">{{ blog.title }}</h2></a>
+                          <a href="{{blog.get_absolute_url}}" class="post-title-link brand-text"><h2 class="post-title">{{ blog.title }}</h2></a>
                           <font size="3" color="#0BD4E5">Posted on - </font><font size="2" color="#0BD4E5">{{ blog.date }}</font>
                           <hr />
                           <p class="post-content">{{blog.body|safe|escape|truncatewords_html:35}}</p>
@@ -250,7 +250,7 @@
                       <a href="http://www.facebook.com/sharer.php?u={{blog.get_absolute_url}}" class="left" title="Share on Facebook" style="margin-right: 25px;"><i class="fa fa-facebook"></i><span class="numb"></span></a>
                       <a href="https://twitter.com/intent/tweet?url={{blog.get_absolute_url}}&text={{blog.title}}&via=kdjohar91" class="left" title="Share on Twitter" style="margin-right: 25px;"><i class="fa fa-twitter"></i><span class="numb"></span></a>
                       <a href="https://plus.google.com/share?url={{blog.get_absolute_url}}" class="left" title="Share on Google+" style="margin-right: 25px;"><i class="fa fa-google-plus"></i><span class="numb"></span></a>
-                      <a href="single.html" class="brand-text right waves-effect">read more</a>
+                      <a href="{{blog.get_absolute_url}}" class="brand-text right waves-effect">read more</a>
                     </div>
                   </div>
                 </article> <!--./single post-->
