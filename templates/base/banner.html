@@ -1,0 +1,22 @@
+<section id="banner" class="root-sec brand-bg padd-tb-55 single-banner blogpage-banner-wrap">
+      <div class="container">
+        <div class="row">
+          <div class="clearfix blog-banner-text blog-single-banner">
+            <div class="col-md-12">
+              <h2 class="title">{% if title %}{{title}}{% else %}{{blog.title}}{% endif %}</h2>
+                {% if blog.title %}
+              <ul class="clearfix blog-post-meta">
+                <li>{{blog.date}}</li>
+                <!--
+                  <li><a href="#">5 Comments</a>
+                </li>
+                <li><a href="#">UX Design</a>
+                </li>
+                -->
+              </ul>
+                {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> <!-- ./Banner end -->

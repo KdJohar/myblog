@@ -1,0 +1,453 @@
+/* ==================================================================
+
+*   MaterialX Media Queries
+
+TOC : 
+
+1. screenwidth greater than 1024px (Medium Screen/Large Tablets)
+2. screenwidth less than 1024px (Medium Screen/Large Tablets)
+3. screenwidth less than 960px (Mobile wide/Smaller Tablets)
+4. screenwidth less than 768px (Mobile wide/Smaller Tablets)
+5. screenwidth greater than 480px (Medium Screen Mobile)
+
+
+/* ================================================================== */
+
+
+
+/* Screens Resolution : 1024px
+-------------------------------------------------------------------------- */
+@media only screen and (max-width: 1365px) {
+    .side-nav li {
+        margin-left: 30px;
+    }
+}
+
+
+/* Screens Resolution : 1024px
+-------------------------------------------------------------------------- */
+@media only screen and (max-width: 1024px) {
+
+    .home-title {
+        font-size: 54px;
+    }
+
+    .home-subtitle {
+        font-size: 16px;
+    }
+
+    #about .padd-tb-120 {
+        padding-bottom: 80px;
+        padding-top: 80px;
+    }
+
+}
+
+@media only screen and (max-width: 992px) {
+
+    .home-inner {
+        min-height: 400px;
+    }
+
+    .person-about {
+        margin-bottom: 40px;
+    }
+
+    .title {
+        font-size: 42px;
+    }
+
+    .section-head {
+        margin-bottom: 40px;
+    }
+
+    .skill-graph .single-skill {
+        height: 450px;
+    }
+
+    .after-li {
+        height: 250px;
+    }
+
+    .primary-nav .brand-logo {
+        left: 75px;
+        max-width: 300px;
+        position: absolute;
+    }
+
+    .primary-nav .brand-logo {
+        display: none;
+    }
+
+
+    .side-nav li a, .side-nav li.current a, .side-nav li a:hover {
+        border: none;
+    }
+
+
+    nav a.button-collapse {
+        color: #727272;
+        float: left;
+        left: 0;
+        position: absolute;
+        top: 8px;
+        z-index: 99;
+    }
+
+    ul.side-nav {
+        z-index: 999;
+    }
+
+    .side-nav li:first-child, .side-nav li {
+        margin-left: 0;
+    }
+
+    nav ul li {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+
+    .side-nav li a {
+        text-transform: none;
+        line-height: 10px;
+        padding: 0;
+    }
+
+    .side-nav li i {
+        display: inline-block;
+        font-size: 15px;
+        line-height: 60px;
+        width: 40px;
+    }
+
+    .mobile-profile{
+        background: url('../../images/home-bg.jpg') no-repeat scroll center center / cover ;
+        display: block;
+        min-height: 160px;
+        position: relative;
+    }
+
+    .profile-inner {
+        background: none repeat scroll 0 0 rgba(60, 70, 80, 0.7);
+        height: 100%;
+        left: 0;
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    .pp-container {
+        display: block;
+        margin: 5px 0;
+        width: 60px;
+    }
+
+    .pp-container img {
+        border-radius: 50%;
+        width: 100%;
+        display: block;
+    }
+
+    .mobile-profile h3 {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        margin: 8px auto 5px;
+        text-align: left;
+    }
+
+    .mobile-profile h5 {
+        color: #fff;
+        font-size: 13px;
+        text-align: left;
+    }
+
+    .contact-form .submit-wrap {
+        margin-top: 40px;
+    }
+
+    .about-inner {
+        margin: 50px 0;
+    }
+
+    .padd-tb-120 {
+        padding-bottom: 80px;
+        padding-top: 80px;
+    }
+
+    #portfolio-item-loader {
+        margin: 0 auto;
+        display: block;
+    }
+
+    #skill .sec-overlay {
+        padding-bottom: 80px;
+        padding-top: 70px;
+    }
+
+    .portfolio-wrap {
+        padding-bottom: 80px;
+    }
+
+    .portfolio-top {
+        margin-bottom: 50px;
+        padding-bottom: 15px;
+    }
+
+    .experience-wrap {
+        padding: 80px 0;
+    }
+
+    .about-inner, .skill-inner, .experience-inner, 
+    .education-inner,  .portfolio-inner, .team-inner, 
+    .funfact-inner, .testimonial-inner, .contact-inner {
+        padding: 0 20px;
+    }
+
+    #map {
+        height: 495px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+
+    .skill-left {
+        margin-top: 0;
+    }
+
+    .skill-inner {
+        margin-top: 0;
+    }
+
+    .btn-wrapp {
+        display: block;
+        margin: 0 auto;
+        position: static;
+        width: 142px;
+    }
+
+    .btn-wrapp a {
+        display: inline-block;
+        margin-bottom: 0;
+        margin-top: 50px;
+    }
+
+    .btn-wrapp a:first-child {
+        margin-right: 25px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .home-inner {
+        height: calc(100vh - 100px);
+    }
+
+    .section-head {
+        margin-bottom: 30px;
+    }
+
+    .home-title {
+        font-size: 42px;
+    }
+
+    .home-subtitle {
+        font-size: 14px;
+    }
+
+    .title {
+        font-size: 36px;
+        line-height: 1.1;
+    }
+
+    .modal .title {
+        font-size: 18px;
+        line-height: 1.2;
+    }
+    .section-title {
+        margin-bottom: 20px;
+    }
+
+    .person-about .subtitle {
+        font-size: 24px;
+    }
+
+    .about-wrap {
+        padding: 30px 0;
+    }
+
+    .person-img img {
+        margin-bottom: 25px;
+    }
+
+    .funfact-box .card-panel {
+        margin-bottom: 30px;
+    }
+
+    .education-wrap, .experience-wrap,
+    .team-wrap, .fun-facts-wrap, .testimonial-wrap, .blog-wrap, .contact-wrap {
+        padding-bottom: 80px;
+        padding-top: 80px;
+    }
+
+    .portfolio-top {
+        padding-top: 80px;
+        padding-bottom: 15px;
+    }
+
+    .portfolio-category li {
+        margin-bottom: 15px;
+        margin-right: 20px;
+    }
+
+    .skill-graph .single-skill {
+        height: 335px;
+    }
+
+    .after-li {
+        height: 200px;
+    }
+
+    .skill-right {
+        padding-top: 30px;
+    }
+
+    .skill-title {
+        padding-top: 5px;
+    }
+
+    .contact-info li {
+        border: none;
+        float: none;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        padding-right: 10px;
+        text-align: left;
+    }
+
+    #map {
+        border-radius: 0;
+        height: 250px;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .cform-wrapper {
+        border-radius: 0;
+    }
+
+    .social-icons {
+        display: block;
+        float: none;
+        margin: 15px auto;
+        text-align: center;
+        width: 100%;
+    }
+    .copyright {
+        display: block;
+        float: none;
+        padding: 5px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .thumb-slides-container {
+        margin: 0 auto;
+        max-width: 450px;
+    }
+
+    .protfolio-item li {
+        float: left;
+        margin-right: 0.5%;
+        margin-bottom: 0.5%;
+        width: 49%;
+    }
+
+}
+
+@media only screen and (max-width: 479px) {
+
+    .home-title {
+        font-size: 36px;
+    }
+
+    .home-subtitle {
+        font-size: 13px;
+    }
+
+    .title {
+        font-size: 32px;
+    }
+
+    .static-menu form {
+        width: 170px;
+    }
+
+    .section-head {
+        margin-bottom: 30px;
+    }
+
+    .about-subtitle {
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+
+    .skill-graph .single-skill {
+        height: 335px;
+    }
+
+    .thumb-slides-container {
+        margin: 0 auto;
+        max-width: 285px;
+    }
+
+    #message-success {
+        float: left;
+        margin: 24px auto;
+        position: relative;
+        width: 100%;
+    }
+
+    #message-success p{
+        width: 100%;
+        text-align: center;
+    }
+
+    .protfolio-item li {
+        float: left;
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .portfolio-category li {
+        margin-right: 10px;
+    }
+
+    .portfolio-category li a {
+        font-size: 12px;
+    }
+
+    .about-inner, .skill-inner, .experience-inner, 
+    .education-inner, .portfolio-inner, .team-inner, 
+    .funfact-inner, .testimonial-inner, .blog-inner, .contact-inner {
+        padding: 0;
+    }
+
+}
+
+@media only screen and (max-width: 359px) {
+
+    .home-title {
+        font-size: 32px;
+    }
+
+    .home-subtitle {
+        font-size: 12px;
+    }
+
+    .thumb-slides-container {
+        max-width: 250px;
+    }
+}

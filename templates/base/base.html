@@ -1,75 +1,52 @@
-{% include 'base/navigation.html' %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
 
-		
-		
+<head>
+  {% include 'base/head.html' %}
+</head>
 
-		<!-- Start Page Banner -->
+<body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+ <!-- start option panel -->
+ {% include 'preloader.html' %}
+ <main id="app" class="main-section">
+     <header id="navigation" class="root-sec white nav">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="nav-inner">
 
-        <div class="page-banner">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<h2>{{ page_title }} {% if no %} |  {{no}} {% endif %} </h2>
+ {% include 'base/navigation.html' %}
 
-					</div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </header> <!-- header navigation end -->
 
-				</div>
-			</div>
-		</div>
-
-		<!-- End Page Banner -->
+ {% block content %}
+ {% endblock %}
 
 
-		
-		
-		<!-- Start Content -->
-		<div id="content">
-			<div class="container">
+  {% include 'base/footer.html' %}
 
-				<div class="row blog-page">
-					
-					<!-- Start Blog Posts -->
-					<div class="col-md-9 blog-box">
-						
-						{% block contents %}
-
-                        {% endblock %}
-
-
-					</div>
-					<!-- End Blog Posts -->
-					
-					
-					{% include 'base/sidebar.html' %}
-					<!--End sidebar-->
-					
-					
-				</div>
-			</div>
-		</div>
-		<!-- End Content -->
-		
-		
-		
-		
-		<!-- Start Footer -->
-		{% include 'base/footer.html' %}
-		<!-- End Footer -->
-		
-	</div>
-	<!-- End Container -->
-	
-	<!-- Go To Top Link -->
-	<a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
-	
-	<div id="loader">
-		<div class="spinner">
-			<div class="dot1"></div>
-			<div class="dot2"></div>
-		</div>
-	</div>
-	
-	
-	
+ </main>
+ {% include 'base/js.html' %}
 </body>
+
 </html>

@@ -1,0 +1,107 @@
+.brand-text {
+    color: #00bcd4 !important;
+}
+
+.brand-text i {
+    color: #00bcd4 !important;
+}
+
+.brand-bg,
+.sweet-alert button {
+    background-color: #00bcd4 !important;
+}
+
+.waves-effect.waves-brand  {
+    background-color: rgba(0, 188, 212, 0.66);
+}
+
+.p-overlay {
+    background-color: rgba(0, 188, 212, 0.9);
+}
+
+
+.circle-loader .path {
+    stroke: #00bcd4;
+}
+
+
+.side-nav  li.current a,
+.side-nav  li a:hover {
+    border-bottom-color: #00bcd4;
+}
+
+.static-menu li i:hover,
+.static-menu li a:hover,
+.submenu-ul li a:hover,
+.home-title span,
+.about-subtitle,
+.person-about > a.btn-large,
+.about-social ul li a i,
+.skill-title,
+.skill-count,
+.single-widget ul li a,
+.single-post-content a,
+.share-post li a:hover,
+.com-title a,
+span.num {
+    color: #00bcd4;
+}
+
+.singel-hr-inner,
+.hr-wrap,
+.hrc:after,
+.thumb-slides-container.owl-theme .owl-controls .owl-page.active span,
+.blog-inner .card-content a.right:hover,
+.blog-inner .card-content a.right:focus,
+.contact-form .submit-btn:hover,
+.contact-form .submit-btn:focus,
+a.tags,
+.blog-inner .card-content a.right:active {
+    background-color: #00bcd4;
+}
+
+.contact-form .materialize-textarea:focus,
+.contact-form .input-box:focus {
+    border-color: #00bcd4;
+    box-shadow: 0px 1px 0px #00bcd4;
+}
+
+
+.single-post-content blockquote {
+    border-left: 5px solid #00bcd4;
+}
+
+
+
+@-webkit-keyframes color {
+    0%   {stroke: #00bcd4;}
+    20%  {stroke: #00bcd4;}
+    25%  {stroke: #00bcd4;}
+    45%  {stroke: #00bcd4;}
+    50%  {stroke: #00bcd4;}
+    70%  {stroke: #00bcd4;}
+    75%  {stroke: #00bcd4;}
+    95%  {stroke: #00bcd4;}
+}
+
+@keyframes color {
+    0%   {stroke: #00bcd4;}
+    20%  {stroke: #00bcd4;}
+    25%  {stroke: #00bcd4;}
+    45%  {stroke: #00bcd4;}
+    50%  {stroke: #00bcd4;}
+    70%  {stroke: #00bcd4;}
+    75%  {stroke: #00bcd4;}
+    95%  {stroke: #00bcd4;}
+}
+
+
+/* Add your CSS below */
+
+
+
+
+.menu-select [type="radio"]:checked + label:after {
+    border-color: #00bcd4;
+    background-color: #00bcd4;
+}

@@ -1,51 +1,71 @@
-{% extends 'base/base.html' %}
+{% extends 'base/base2.html' %}
 {% load staticfiles %}
-{% block contents %}
-        <div class="blog-post gallery-post">
+{% block main_content %}
 
-      <!-- Start Single Post (Gallery Slider) -->
+<section id="all-posts" class="root-sec grey lighten-5 blogpage-posts-wrap">
+      <div class="container">
+        <div class="row">
+          <div class="clearfix all-blog-post blog-inner with-sidebar">
 
-    <!-- End Single Post (Gallery) -->
+          <!-- post container start-->
+            <div class="col-sm-8">
+              <article class="single-post-page">
 
-    <!-- Start Single Post Content -->
-    <div class="post-content">
-     <div class="post-type"><i class="fa fa-picture-o"></i></div>
-     <h2>{{ blog.title }}</h2>
-     <ul class="post-meta">
+                <div class="single-post-content">
+                    {{blog.body|safe|escape}}
+                </div>
+                <!--<div class="clearfix post-footer">
 
-       <li>{{blog.date}}</li>
-       <li>{{blog.time}}</li>
+                  <ul class="clearfix centre share-post">
+                    <li><a href='http://www.facebook.com/sharer.php?u={{blog.get_absolute_url}}'><img src="{% static 'images/facebook.png' %}"></a>
+                    </li>
+                    <li><a href='http://www.facebook.com/sharer.php?u={{blog.get_absolute_url}}'><img src="{% static 'images/google.png' %}"></a>
+                    </li>
+                    <li><a href='http://www.facebook.com/sharer.php?u={{blog.get_absolute_url}}'><img src="{% static 'images/linkedin.png' %}"></a>
+                    </li>
+                    <li><a href='http://www.facebook.com/sharer.php?u={{blog.get_absolute_url}}'><img src="{% static 'images/twitter.png' %}"></a>
+                    </li>
+                    <li><a href='http://www.facebook.com/sharer.php?u={{blog.get_absolute_url}}'><img src="{% static 'images/email.png' %}"></a>
+                    </li>
 
-     </ul>
-        <br />
-     {{blog.body|safe|escape}}
-
-     <div class="post-bottom clearfix">
-         <!--
-      <div class="post-tags-list">
-        <a href="#">Theme</a>
-        <a href="#">Mobile</a>
-        <a href="#">Design</a>
-        <a href="#">Wordpress</a>
-        <a href="#">Jquery</a>
-      </div>
-      -->
-      <div class="post-share">
-        <span>Share This Post:</span>
-        <span class='st_googleplus' displayText='Google +'></span>
-        <span class='st_facebook' displayText='Facebook'></span>
-        <span class='st_twitter' displayText='Tweet'></span>
-        <span class='st_linkedin' displayText='LinkedIn'></span>
-        <span class='st_pinterest' displayText='Pinterest'></span>
-        <span class='st_email' displayText='Email'></span>
-      </div>
-    </div>
-
- </div>
- <!-- End Single Post Content -->
+                  </ul>
+                </div>-->
 
 
-</div>
+                <div class="contact-form  comment-reply-form">
+                    <!--
+                  <h2 class="com-title">Leave a Reply<a href="#">Cancel Replay</a></h2>
+                  <form action="#" class="cform-wrapper">
+                    <div class="input-field">
+                      <input id="name" type="text" class="validate input-box">
+                      <label for="name" class="input-label">Name*</label>
+                    </div>
+                    <div class="input-field">
+                      <input id="email" type="email" class="validate input-box">
+                      <label for="email" class="input-label">Email*</label>
+                    </div>
+                    <div class="input-field">
+                      <input id="website" type="text" class="validate input-box">
+                      <label for="website" class="input-label">Website</label>
+                    </div>
+                    <div class="input-field textarea-input">
+                      <textarea id="comment" class="materialize-textarea" style="height: 22px;"></textarea>
+                      <label for="comment" class="input-label">Comment</label>
+                    </div>
+                    <div class="input-field submit-wrap">
+                      <button type="submit" class="waves-effect waves-light btn-large brand-bg white-text comm-submit regular-text">SEND MESSAGE</button>
+
+                    </div>
+                  </form>
+                </div>-->
+              </article>
+            </div> <!-- ./post container end-->
+
+            <!-- Sidebar start-->
+            {% include 'base/sidebar.html' %}
+          </div>
+        </div>
+      </div> <!-- ./container end-->
+    </section>  <!-- ./Blog Post Container end-->
 
 {% endblock %}
-

@@ -1,45 +1,55 @@
-{% extends 'base/base.html' %}
-{% block contents %}
-						{% for blog in blogs %}
-						<!-- Start Post -->
-						<div class="blog-post standard-post">
-							<!-- Post Content -->
-							<div class="post-content">
-								<div class="post-type"><i class="fa fa-pencil"></i></div>
-								<h2><a href="{{ blog.get_absolute_url }}">{{ blog.title }}</a></h2>
-                                <br />
-								<ul class="post-meta">
+{% extends 'base/base2.html' %}
+{% load staticfiles %}
 
-									<li>{{ blog.date }} , {{ blog.time }}</li>
-									<li><a href="">{{blog.category}}</a></li>
+{% block main_content %}
 
-								</ul>
+    <section class="bottom-50 root-sec grey lighten-5 blogpage-posts-wrap">
+      <div class="container">
+        <div class="row">
+          <div class="clearfix all-blog-post blog-inner with-sidebar">
+            <div class="col-sm-8">
+              <div class="row" id="blog-posts">
+                  {% if blogs %}
+                    {% for blog in blogs %}
+                <article class="col-xs-12 col-sm-12 col-md-6 single-card-box single-post">
+                  <div class="card">
+                    <div class="card-image">
+                      <div class="card-img-wrap">
+
+                        <div class="post-body">
+                          <a href="{{ blog.get_absolute_url }}" class="post-title-link brand-text"><h2 class="post-title">{{blog.title}}</h2></a>
+                          <font size="3" color="#0BD4E5">Posted on - </font><font size="2" color="#0BD4E5">{{blog.date}} </font>
+                          <hr />
+                          <p class="post-content">{{blog.body|safe|escape|truncatewords_html:35}}</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="clearfix card-content">
+                      <a href='http://www.facebook.com/sharer.php?u={{blog.get_absolute_url}}' class="left" title="Share on Facebook" style="margin-right: 25px;"><i class="fa fa-facebook"></i><span class="numb"></span></a>
+                      <a href="https://twitter.com/intent/tweet?url={{blog.get_absolute_url}}&text={{blog.title}}&via=kdjohar91" class="left" title="Share on Twitter" style="margin-right: 25px;"><i class="fa fa-twitter"></i><span class="numb"></span></a>
+                      <a href="https://plus.google.com/share?url={{blog.get_absolute_url}}" class="left" title="Share on Google+" style="margin-right: 25px;"><i class="fa fa-google-plus"></i><span class="numb"></span></a>
+                      <a href="{{ blog.get_absolute_url }}" class="brand-text right waves-effect">read more</a>
+                    </div>
+                  </div>
+                </article> <!--./single post-->
+                  {% endfor %}
+                  {% else %}
+                  <h1>No Blogs for {{title}}</h1>
+                  {% endif %}
 
 
 
 
 
-								<p>{{blog.body|safe|escape|truncatewords_html:35}}</p>
+              </div>
 
-								<a class="main-button" href="{{ blog.get_absolute_url }}">Read More <i class="fa fa-angle-right"></i></a>
-							</div>
-						</div>
-						<!-- End Post -->
-                        {% endfor %}
+            </div>
 
-
-
-						
-						<!-- Start Pagination -->
-                        <!--
-						<div id="pagination">
-							<span class="all-pages">Page 1 of 3</span>
-							<span class="current page-num">1</span>
-							<a class="page-num" href="#">2</a>
-							<a class="page-num" href="#">3</a>
-							<a class="next-page" href="#">Next</a>
-						</div>
-						-->
-						<!-- End Pagination -->
+            <!-- Sidebar -->
+            {% include 'base/sidebar.html' %}
+          </div>
+        </div>
+      </div> <!-- ./container end -->
+    </section> <!-- ./Blog Post container end-->
 
 {% endblock %}

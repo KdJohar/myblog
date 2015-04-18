@@ -1,75 +1,10 @@
-{% include 'base/navigation.html' %}
+{% extends 'base/base.html' %}
+{% load staticfiles %}
+{% block content %}
 
-		
-		
+{% include 'base/banner.html' %}
 
-		<!-- Start Page Banner -->
-
-        <div class="page-banner">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<h2>{{ page_title }} {% if no %} |  {{no}} {% endif %} </h2>
-
-					</div>
-
-				</div>
-			</div>
-		</div>
-
-		<!-- End Page Banner -->
-
-
-		
-		
-		<!-- Start Content -->
-		<div id="content">
-			<div class="container">
-
-				<div class="row blog-page">
-					
-					<!-- Start Blog Posts -->
-					<div class="col-md-12 blog-box">
-						
-						{% block contents %}
-
-                        {% endblock %}
-
-
-					</div>
-					<!-- End Blog Posts -->
-					
-					
-
-					<!--End sidebar-->
-					
-					
-				</div>
-			</div>
-		</div>
-		<!-- End Content -->
-		
-		
-		
-		
-		<!-- Start Footer -->
-		{% include 'base/footer.html' %}
-		<!-- End Footer -->
-		
-	</div>
-	<!-- End Container -->
-	
-	<!-- Go To Top Link -->
-	<a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
-	
-	<div id="loader">
-		<div class="spinner">
-			<div class="dot1"></div>
-			<div class="dot2"></div>
-		</div>
-	</div>
-	
-	
-	
-</body>
-</html>
+    <!-- Blog Post Container -->
+{% block main_content %}
+{% endblock %}
+{% endblock %}

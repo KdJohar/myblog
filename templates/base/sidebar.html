@@ -1,98 +1,67 @@
-<div class="col-md-3 sidebar right-sidebar">
-						
-						<!-- Search Widget -->
-						<div class="widget widget-search">
-							<form action="#">
-								<input type="search" placeholder="Enter Keywords..." />
-								<button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
-							</form>
-						</div>
+<div class="col-sm-4">
+              <div class="primary-sidebar">
 
-						<!-- Categories Widget -->
-						<div class="widget widget-categories">
-							<a href="{% url 'category' %}">  <h4>Categories <span class="head-line"></span></h4></a>
-							<ul>
-                                {% for category in categories %}
-								<li>
-									<a href="{{ category.get_absolute_url }}">{{ category.name }}</a>
-								</li>
-								{% endfor %}
-							</ul>
-						</div>
-                        <div class="widget">
 
-							<div>
-								<a href="http://panel.bullten.net/aff.php?aff=023" target="_blank"><img src="http://panel.bullten.net/images/affiliates/468X60.jpg" width="468" height="60" border="0"></a>
-							</div>
-						</div>
+                  <!-- Place this tag in your head or just before your close body tag. -->
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 
-						<!-- Popular Posts widget -->
-                        <!--
-						<div class="widget widget-popular-posts">
-							<h4>Popular Post <span class="head-line"></span></h4>
-							<ul>
-								<li>
-									<div class="widget-thumb">
-										<a href="#"><img src="images/blog-mini-01.jpg" alt="" /></a>
-									</div>
-									<div class="widget-content">
-										<h5><a href="#">How To Download The Google Fonts Catalog</a></h5>
-										<span>Jul 29 2013</span>
-									</div>
-									<div class="clearfix"></div>
-								</li>
-								<li>
-									<div class="widget-thumb">
-										<a href="#"><img src="images/blog-mini-02.jpg" alt="" /></a>
-									</div>
-									<div class="widget-content">
-										<h5><a href="#">How To Download The Google Fonts Catalog</a></h5>
-										<span>Jul 29 2013</span>
-									</div>
-									<div class="clearfix"></div>
-								</li>
-								<li>
-									<div class="widget-thumb">
-										<a href="#"><img src="images/blog-mini-03.jpg" alt="" /></a>
-									</div>
-									<div class="widget-content">
-										<h5><a href="#">How To Download The Google Fonts Catalog</a></h5>
-										<span>Jul 29 2013</span>
-									</div>
-									<div class="clearfix"></div>
-								</li>
-							</ul>
-						</div>
-						-->
-						<!-- Video Widget -->
-                        <!--
-						<div class="widget">
-							<h4>Video <span class="head-line"></span></h4>
-							<div>
-								<iframe src="http://player.vimeo.com/video/63322694?byline=0&amp;portrait=0&amp;badge=0" width="800" height="450"></iframe>
-							</div>
-						</div>
-                         -->
+<!-- Place this tag where you want the widget to render. -->
+<div class="g-person" data-width="300" data-href="//plus.google.com/u/0/100226680180899190661" data-rel="author"></div>
 
-						
-						<!-- Tags Widget -->
-                        <!--
-						<div class="widget widget-tags">
-							<h4>Tags <span class="head-line"></span></h4>
-							<div class="tagcloud">
-								<a href="#">Portfolio</a>
-								<a href="#">Theme</a>
-								<a href="#">Mobile</a>
-								<a href="#">Design</a>
-								<a href="#">Wordpress</a>
-								<a href="#">Jquery</a>
-								<a href="#">CSS</a>
-								<a href="#">Modern</a>
-								<a href="#">Theme</a>
-								<a href="#">Icons</a>
-								<a href="#">Google</a>
-							</div>
-						</div>
-						-->
 
-					</div>
+                  <!--
+                <aside class="single-widget">
+                  <h2 class="widget-title">CATEGORIES</h2>
+                  <ul>
+                    <li><a href="#">UX Design<span class="badge">1</span></a>
+                    </li>
+                    <li><a href="#">UI Design</a>
+                    </li>
+                    <li><a href="#">HTML</a>
+                    </li>
+                    <li><a href="#">Audio</a>
+                    </li>
+                    <li><a href="#">Video</a>
+                    </li>
+                  </ul>
+                </aside>
+                -->
+                <hr />
+                   <a href="http://panel.bullten.net/aff.php?aff=023" target="_blank"><img src="http://panel.bullten.net/images/affiliates/468X60.jpg" width="468" height="60" border="0"></a>
+                <!--
+                <aside class="single-widget">
+                  <h2 class="widget-title">ARCHIVES</h2>
+                  <ul>
+                    <li><a href="#">March 24, 2015</a>
+                    </li>
+                    <li><a href="#">April 24, 2015</a>
+                    </li>
+                    <li><a href="#">May 24, 2015</a>
+                    </li>
+                    <li><a href="#">June 24, 2015</a>
+                    </li>
+                    <li><a href="#">July 24, 2015</a>
+                    </li>
+                  </ul>
+                </aside>
+                <aside class="single-widget">
+                  <h2 class="widget-title">TAGS</h2>
+                  <div class="widget-text">
+                    <a href="#" class="tags">Art</a>
+                    <a href="#" class="tags">Awesome</a>
+                    <a href="#" class="tags">Style</a>
+                    <a href="#" class="tags">Image</a>
+                    <a href="#" class="tags">Design</a>
+                    <a href="#" class="tags">Post</a>
+                    <a href="#" class="tags">Three</a>
+                    <a href="#" class="tags">Typhography</a>
+                    <a href="#" class="tags">BDinfosys</a>
+                  </div>
+                </aside>
+                -->
+                 <hr />
+                 <a class="twitter-timeline" href="https://twitter.com/kdjohar91" data-widget-id="575939129126490112">Tweets by @kdjohar91</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+              </div>
+            </div> <!-- ./sidebar end -->

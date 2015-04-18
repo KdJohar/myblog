@@ -1,0 +1,51 @@
+{% extends 'base/base2.html' %}
+{% load staticfiles %}
+
+{% block main_content %}
+
+    <section class="bottom-50 root-sec grey lighten-5 blogpage-posts-wrap">
+      <div class="container">
+        <div class="row">
+          <div class="clearfix all-blog-post blog-inner with-sidebar">
+            <div class="col-sm-8">
+              <div class="row" id="blog-posts">
+                    {% for blog in blogs %}
+                <article class="col-xs-12 col-sm-12 col-md-6 single-card-box single-post">
+                  <div class="card">
+                    <div class="card-image">
+                      <div class="card-img-wrap">
+
+                        <div class="post-body">
+                          <a href="{{ blog.get_absolute_url }}" class="post-title-link brand-text"><h2 class="post-title">{{blog.title}}</h2></a>
+                          <font size="3" color="#0BD4E5">Posted on - </font><font size="2" color="#0BD4E5">{{blog.date}} </font>
+                          <hr />
+                          <p class="post-content">{{blog.body|safe|escape|truncatewords_html:35}}</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="clearfix card-content">
+                      <a href='http://www.facebook.com/sharer.php?u={{blog.get_absolute_url}}' class="left" title="Share on Facebook" style="margin-right: 25px;"><i class="fa fa-facebook"></i><span class="numb"></span></a>
+                      <a href="https://twitter.com/intent/tweet?url={{blog.get_absolute_url}}&text={{blog.title}}&via=kdjohar91" class="left" title="Share on Twitter" style="margin-right: 25px;"><i class="fa fa-twitter"></i><span class="numb"></span></a>
+                      <a href="https://plus.google.com/share?url={{blog.get_absolute_url}}" class="left" title="Share on Google+" style="margin-right: 25px;"><i class="fa fa-google-plus"></i><span class="numb"></span></a>
+                      <a href="{{ blog.get_absolute_url }}" class="brand-text right waves-effect">read more</a>
+                    </div>
+                  </div>
+                </article> <!--./single post-->
+                  {% endfor %}
+
+
+
+
+
+              </div>
+
+            </div>
+
+            <!-- Sidebar -->
+            {% include 'base/sidebar.html' %}
+          </div>
+        </div>
+      </div> <!-- ./container end -->
+    </section> <!-- ./Blog Post container end-->
+
+{% endblock %}
