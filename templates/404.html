@@ -1,10 +1,274 @@
-{% extends 'base/base2.html' %}
+{% extends 'base/base.html' %}
 {% load staticfiles %}
-{% block contents %}
- <div class="error-page">
-						<h1>404</h1>
-						<h3>File not Found</h3>
-						<p>We're sorry, but the page you were looking for doesn't exist.</p>
-						<div class="text-center"><a href="{% url 'home' %}" class="btn-system btn-small">Back To Home</a></div>
-					</div>
-{% endblock %}
+        {% block content %}
+    
+
+    <section id="home" class="scroll-section root-sec grey lighten-5 home-wrap">
+      <div class="sec-overlay">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="home-inner">
+                  <div class="center-align home-content">
+                    <h1 class="home-title">HI! I'm <span>Kd Johar</span></h1>
+                    <h2 class="home-subtitle">Python developer</h2>
+                    <a href="{% url 'blogs' %}" class="btn waves-effect waves-light btn-large brand-bg white-text regular-text">My blogs <i class="mdi-content-send left"></i>
+                    </a>
+                    <a href="{% url 'contact' %}" class="btn waves-effect waves-light btn-large brand-bg white-text regular-text">Contact Me <i class="mdi-content-send left"></i>
+                    </a>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- .container end -->
+        <div class="section-call-to-area">
+          <div class="container">
+            <div class="row">
+              <a href="#about" class="btn-floating btn-large button-middle call-to-about section-call-to-btn animated btn-up btn-hidden" data-section="#about">
+                <i class="mdi-navigation-expand-more"></i>
+              </a>
+            </div>
+          </div>
+          <!-- .container end -->
+        </div>
+      </div>
+    </section>
+    <!-- #home Section end -->
+
+    <!-- About Section start -->
+    <section id="about" class="scroll-section root-sec padd-tb-60 grey lighten-5 about-wrap">
+      <div class="container">
+        <div class="row">
+          <div class="clearfix about-inner">
+
+            <div class="col-sm-12 col-md-4">
+              <div class="person-about">
+                <h3 class="about-subtitle">My Story</h3>
+                <p style="margin-bottom: 0px;">Hello, I’m a Karandeep Singh Johar.I am pursuing M.Tech in Information Technology from IIPS,DAVV Indore.<br />
+                Some hashtags that defines me:- </p>
+                <ul>
+                    <li>#CanComeUpWithTheUnusualAndUnexpected</li>
+                    <li>#GadgetsGeek</li>
+                    <li>#TeamLeader</li>
+                    <li>#CoffeeLover</li>
+                    <li>#MultiTasking</li>
+                    <li>#HateStudying</li>
+                    <li>#Lazy</li>
+                </ul>
+                <!--
+                <a class="waves-effect waves-light btn-large brand-bg white-text"><i class="mdi-content-archive left"></i> Download Resume</a>
+                -->
+              </div>
+            </div>
+            <!-- about me description -->
+
+            <div class="col-sm-6 col-md-4">
+              <div class="person-img wow fadeIn">
+                <img class="z-depth-1" src="{% static 'images/karan.JPG' %}" alt="">
+              </div>
+            </div>
+            <!-- about me image -->
+
+            <div class="col-sm-6 col-md-4">
+              <div class="person-info">
+                <h3 class="about-subtitle">Personal Information</h3>
+                <h5><span>Name :</span> Karandeep Singh Johar</h5>
+                <h5><span>Age :</span> 23 Years</h5>
+                <!--<h5><span>Phone :</span> +0123456789</h5>-->
+                <h5><span>Email :</span> kdjohar91@gmail.com</h5>
+                <h5><span>Address :</span> Indore, India</h5>
+              </div>
+
+              <div class="about-social">
+                <ul>
+                  <li>
+                    <a href="https://www.facebook.com/karandeepsingh.johar" class="btn-floating waves-effect waves-light white" target="_blank"><i class="fa fa-facebook"></i></a>
+                  </li>
+                   <li>
+                    <a href="https://instagram.com/kd_johar/" class="btn-floating waves-effect waves-light white" target="_blank"><i class="fa fa-instagram"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/kdjohar91" class="btn-floating waves-effect waves-light white" target="_blank"><i class="fa fa-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://plus.google.com/+KarandeepSinghJohar" class="btn-floating waves-effect waves-light white" target="_blank"><i class="fa fa-google-plus"></i></a>
+                   </li>
+                  <li>
+                    <a href="https://www.linkedin.com/in/kdjohar" class="btn-floating waves-effect waves-light white" target="_blank"><i class="fa fa-linkedin"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/KdJohar" class="btn-floating waves-effect waves-light white" target="_blank"><i class="fa fa-github"></i></a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+            <!-- about me info -->
+
+          </div>
+        </div>
+      </div>
+      <!-- .container end -->
+    </section>
+    <!-- #about Section end -->
+
+      <section id="education" class="root-sec grey lighten-5 padd-tb-120 education-wrap">
+        <div class="container">
+          <div class="row">
+            <div class="education-inner">
+              <div class="col-sm-12 col-md-10 card-box-wrap">
+                <div class="row">
+                  <div class="clearfix section-head education-text">
+                    <div class="col-sm-12">
+                      <h2 class="title">education</h2>
+                      	
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="overflow-hidden">
+                      <div class="row">
+                        <div id="educationSlider" class="clearfix card-element-wrapper">
+
+                        <!-- single education -->
+                          <div class="col-sm-4 single-card-box wow fadeInUpSmall" data-wow-duration=".7s">
+                            <div class="card">
+                              <div class="card-image waves-effect waves-block waves-light">
+                                <h2 class="left-align card-title-top">2006 - 2007</h2>
+                                <div class="card-img-wrap">
+                                  <img class="activator" src="{% static 'images/grad-cap.png' %}" alt="">
+                                </div>
+                              </div>
+                              <div class="card-content">
+                                <span class="card-title activator brand-text"> Secondary School Certificate </span>
+                                <p>Stella Maris Inter College</p>
+                              </div>
+                              <!-- Reveal content-->
+
+                            </div>
+                          </div> <!-- single education end -->
+
+                          <!-- single education -->
+                          <div class="col-sm-4 single-card-box wow fadeInUpSmall" data-wow-delay=".2s" data-wow-duration=".7s">
+                            <div class="card">
+                              <div class="card-image waves-effect waves-block waves-light">
+                                <h2 class="left-align card-title-top">2010 - 2011</h2>
+                                <div class="card-img-wrap">
+                                  <img class="activator" src="{% static 'images/grad-cap.png' %}" alt="">
+                                </div>
+                              </div>
+                              <div class="card-content">
+                                <span class="card-title activator brand-text">Higher Secondary Certificate</span>
+                                <p>Skd Academy</p>
+                              </div>
+
+                            </div>
+                          </div> <!-- single education -->
+
+                        <!-- single education -->
+                          <div class="col-sm-4 single-card-box wow fadeInUpSmall" data-wow-delay=".4s" data-wow-duration=".7s">
+                            <div class="card">
+                              <div class="card-image waves-effect waves-block waves-light">
+                                <h2 class="left-align card-title-top">2011 - 20016(expected)</h2>
+                                <div class="card-img-wrap">
+                                  <img class="activator" src="{% static 'images/grad-cap.png' %}" alt="">
+                                </div>
+                              </div>
+                              <div class="card-content">
+                                <span class="card-title activator brand-text">M.Tech(IT) - 5 1/2 Years</span>
+                                <p>IIPS,DAVV</p>
+                              </div>
+
+                            </div>
+                          </div> <!-- single education -->
+
+                        <!-- single education -->
+                          <div class="col-sm-4 single-card-box">
+                            <div class="card">
+                              <div class="card-image waves-effect waves-block waves-light">
+                                <h2 class="left-align card-title-top">2013</h2>
+                                <div class="card-img-wrap">
+                                  <img class="activator" src="{% static 'images/grad-cap.png' %}" alt="">
+                                </div>
+                              </div>
+                              <div class="card-content">
+                                <span class="card-title activator brand-text">Certified Ethical Hacker</span>
+                                <p>Ninja Securities</p>
+                              </div>
+
+                            </div>
+                          </div> <!-- single education -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-wrapp edu-ctrl">
+                <a class="btn-floating waves-effect waves-light btn-large brand-bg go go-left"><i class="mdi-navigation-chevron-left"></i></a>
+                <a class="btn-floating waves-effect waves-light btn-large brand-bg go go-right"><i class="mdi-navigation-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- #resume Section end -->
+
+    
+
+    
+    <!-- Blog Section end -->
+    <section id="blog" class="scroll-section root-sec grey lighten-5 padd-tb-120 blog-wrap">
+      <div class="container">
+        <div class="row">
+          <div class="blog-inner">
+            <div class="col-sm-12 card-box-wrap">
+              <div class="row">
+                <div class="clearfix section-head blog-text">
+                  <div class="col-sm-10">
+                    <h2 class="title">Blogs</h2>
+
+                  </div>
+                </div>
+                <div class="clearfix card-element-wrapper" id="blog-posts">
+                    {% for blog in blogs %}
+                  <article class="col-sm-6 col-md-4 single-card-box single-post">
+                  <div class="card">
+                    <div class="card-image">
+                      <div class="card-img-wrap">
+
+                        <div class="post-body">
+                          <a href="{{blog.get_absolute_url}}" class="post-title-link brand-text"><h2 class="post-title">{{ blog.title }}</h2></a>
+                          <font size="3" color="#0BD4E5">Posted on - </font><font size="2" color="#0BD4E5">{{ blog.date }}</font>
+                          <hr />
+                          <p class="post-content">{{blog.body|safe|escape|truncatewords_html:35}}</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="clearfix card-content">
+                      <a href="http://www.facebook.com/sharer.php?u={{blog.get_absolute_url}}" class="left" title="Share on Facebook" style="margin-right: 25px;"><i class="fa fa-facebook"></i><span class="numb"></span></a>
+                      <a href="https://twitter.com/intent/tweet?url={{blog.get_absolute_url}}&text={{blog.title}}&via=kdjohar91" class="left" title="Share on Twitter" style="margin-right: 25px;"><i class="fa fa-twitter"></i><span class="numb"></span></a>
+                      <a href="https://plus.google.com/share?url={{blog.get_absolute_url}}" class="left" title="Share on Google+" style="margin-right: 25px;"><i class="fa fa-google-plus"></i><span class="numb"></span></a>
+                      <a href="{{blog.get_absolute_url}}" class="brand-text right waves-effect">read more</a>
+                    </div>
+                  </div>
+                </article> <!--./single post-->
+                    {% endfor %}
+
+                </div>
+                <div class="clearfix left-align">
+                  <div class="col-sm-12">
+                    <a href="{% url 'blogs' %}" class="waves-effect waves-light btn-large load-more">See More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- ./container -->
+    </section>
+    <!-- #blog Section end -->
+
+    <!-- Footer Section end -->
+   {% endblock %}
