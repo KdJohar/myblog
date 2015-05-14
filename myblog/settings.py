@@ -149,8 +149,8 @@ STATICFILES_DIRS = os.path.join(os.path.dirname(__file__), '..', 'static').repla
 TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), '..', 'templates').replace('\\','/'),)
 CACHES = {
     'default': {
-        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
-        'LOCATION': '/home/kd/projects/django/django_cache',
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': 'unix:/tmp/memcached.sock',
         'TIMEOUT': 60,
         'OPTIONS': {
             'MAX_ENTRIES': 1000
