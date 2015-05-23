@@ -54,7 +54,7 @@ def blog_view(request, slug):
 
 
     return render_to_response('blog.html', locals(), context_instance = RequestContext(request))
-
+'''
 def error_404(request):
 
 
@@ -75,6 +75,7 @@ def handler500(request):
                                   context_instance=RequestContext(request))
     response.status_code = 500
     return response
+'''
 def contact(request):
 
     blogs = Blogs.objects.all().filter(publish=True)[:3]
