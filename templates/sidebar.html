@@ -1,0 +1,52 @@
+<div class="col-sm-4">
+              <div class="primary-sidebar">
+                  <aside class="single-widget">
+                      <script src="https://apis.google.com/js/platform.js" async defer></script>
+                        <!-- Place this tag where you want the widget to render. -->
+                        <div class="g-person" data-width="300" data-href="//plus.google.com/u/0/100226680180899190661" data-rel="author"></div>
+                    </aside>
+                  <hr />
+                  <aside class="single-widget">
+                       <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- sidebar -->
+                        <ins class="adsbygoogle"
+                             style="display:block"
+                             data-ad-client="ca-pub-6195276590359835"
+                             data-ad-slot="1876184506"
+                             data-ad-format="auto"></ins>
+                        <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </aside>
+                  <hr />
+                  <aside class="single-widget">
+                        <iframe src='http://www.flipkart.com/affiliate/displayWidget?affrid=WRID-142960835291674289' frameborder=0 height=250 width=300></iframe>
+                    </aside>
+                  <hr />
+                  {% if recent_blogs %}
+                  <aside class="single-widget">
+                  <h2 class="widget-title">RECENT POSTS</h2>
+                  <ul>
+                      {% for blog in recent_blogs %}
+                    <li>
+                      <a href="{{ blog.get_absolute_url }}">{{ blog.title }}</a>
+                      <span>{{ blog.date }}</span>
+                    </li>
+                    {% endfor %}
+                  </ul>
+                </aside>
+                    <hr />
+                  {% endif %}
+                  <aside class="single-widget">
+                        <a href="http://panel.bullten.net/aff.php?aff=023" target="_blank"><img src="http://panel.bullten.net/images/affiliates/468X60.jpg" width="468" height="60" border="0"></a>
+                    </aside>
+                  <hr />
+
+                  <aside class="single-widget">
+                        <a class="twitter-timeline" href="https://twitter.com/kdjohar91" data-widget-id="575939129126490112">Tweets by @kdjohar91</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                    </aside>
+                  <hr />
+
+
+              </div>
+            </div> <!-- ./sidebar end-->

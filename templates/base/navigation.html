@@ -1,27 +1,20 @@
 {% load staticfiles %}
-
-  <!-- Main Container -->
-
-
-
+{% include 'base/googleanalytics.html' %}
+<header id="navigation" class="root-sec white nav">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="nav-inner">
               <nav class="primary-nav">
                 <div class="clearfix nav-wrapper">
-                  <a href="{% url 'home' %}" class="left brand-logo"><img src="http://res.cloudinary.com/kdjohar/image/upload/v1429647637/kd_logo_tkcw1a.png" alt="" style="width: 400px;height: 70px;margin-top: 5px;">
+                  <a href="{% url 'home' %}" class="left brand-logo"><img src="http://res.cloudinary.com/kdjohar/image/upload/v1429647637/kd_logo_tkcw1a.png" alt="" style="height: 50px;width: 200px;margin-top: 15px;">
                   </a>
-                  <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+                  <a href="index.html#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
                   <ul class="right static-menu">
-                    <li class="search-form-li">
-                      <a id="initSearchIcon" class=""><i class="mdi-action-search"></i> </a>
-                      <div class="search-form-wrap hide">
-                        <form action="#" class="">
-                          <input type="search" class="search">
-                          <button type="submit"><i class="mdi-action-search"></i>
-                          </button>
-                        </form>
-                      </div>
-                    </li>
+                      {% include 'base/search.html' %}
+
                     <li>
-                      <a class="dropdown-button blog-submenu-init" href="#!" data-activates="dropdown1">
+                      <a class="dropdown-button blog-submenu-init" href="index.html#!" data-activates="dropdown1">
                         <i class="mdi-navigation-more-vert right"></i>
                       </a>
                     </li>
@@ -32,26 +25,34 @@
                     <li class="mobile-profile">
                      <div class="profile-inner">
                         <div class="pp-container">
-                            <img class="z-depth-1" src="http://res.cloudinary.com/kdjohar/image/upload/v1429647637/karan_w45wko.jpg" alt="">
+                            <img src="http://res.cloudinary.com/kdjohar/image/upload/v1429647637/karan_w45wko.jpg" alt="">
                         </div>
                         <h3>Kd Johar</h3>
-                        <h5>Python developer</h5>
+                        <h5>Python Developer</h5>
                       </div>
                     </li><!-- mini profile end-->
 
-                    <li><a href="{% url 'home' %}" class="waves-effect waves-light"><i class="fa fa-home fa-fw"></i>Home</a>
+
+                    <li><a href="{% url 'home' %}"><i class="fa fa-home fa-fw"></i>Home</a>
                     </li>
                     <li><a href="{% url 'blogs' %}"><i class="fa fa-pencil fa-fw"></i>Blogs</a>
                     </li>
-                    <li><a href="{% url 'contact' %}"><i class="fa fa-pencil fa-fw"></i>Contact</a>
+                    <li><a href="{% url 'contact' %}"><i class="fa fa-phone fa-fw"></i>Contact</a>
                     </li>
-
+                  </ul>
                   <ul id="dropdown1" class="inline-menu submenu-ul dropdown-content">
-                      {% for category in categories %}
+                    <li>Categories</li>
+                    {% for category in categories %}
                     <li><a href="{{category.get_absolute_url}}" class="collection-item">{{category.name}}</a>
                     </li>
-                    {% endfor %}
+                      {% endfor %}
                   </ul>
+
                 </div>
               </nav>
-
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- .container end -->
+    </header>

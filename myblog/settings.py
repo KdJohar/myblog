@@ -46,8 +46,8 @@ INSTALLED_APPS = (
     'ckeditor',
     'blogs',
     'tagging',
-    'django_social_share',
     "compressor",
+    'django.contrib.sitemaps',
 )
 
 MIDDLEWARE_CLASSES = (

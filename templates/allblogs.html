@@ -1,28 +1,40 @@
 {% extends 'base/base2.html' %}
-{% load staticfiles %}
-
-{% block main_content %}
-
-    <section class="bottom-50 root-sec grey lighten-5 blogpage-posts-wrap">
-
+{% block maincontent %}
+<!-- Blog Banner -->
+    <section id="banner" class="root-sec brand-bg padd-tb-73 blogpage-banner-wrap">
       <div class="container">
-        <!-- add sense -->
-                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- allblogs-header -->
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-6195276590359835"
-             data-ad-slot="7409844107"
-             data-ad-format="auto"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-        <!-- add sense -->
         <div class="row">
+          <div class="clearfix blog-banner-text">
+            <div class="col-sm-8 col-md-8 col-lg-8">
+              <h2 class="title" style="margin-bottom: 00px;">{% if title %}{{title}}{% else %}{{blog.title}}{% endif %}</h2>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> <!-- Banner end -->
+
+    <!-- Blog Post Container -->
+    <section class="bottom-50 root-sec grey lighten-5 blogpage-posts-wrap">
+      <div class="container">
+        <div class="row">
+        <!-- google add sense -->
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- allblogs-header -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-6195276590359835"
+                 data-ad-slot="7409844107"
+                 data-ad-format="auto"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        <br />
+        <!-- google add sense -->
           <div class="clearfix all-blog-post blog-inner with-sidebar">
             <div class="col-sm-8">
               <div class="row" id="blog-posts">
-                    {% for blog in blogs %}
+                {% for blog in blogs %}
                 <article class="col-xs-12 col-sm-12 col-md-6 single-card-box single-post">
                   <div class="card">
                     <div class="card-image">
@@ -46,31 +58,26 @@
                 </article> <!--./single post-->
                   {% endfor %}
 
-
-
-
-
               </div>
-
             </div>
 
             <!-- Sidebar -->
-            {% include 'base/sidebar.html' %}
+           {% include 'sidebar.html' %}
           </div>
         </div>
-        <!-- add sense -->
+      <!-- google add sense -->
               <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-      <!-- allblogs-base -->
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-6195276590359835"
-           data-ad-slot="2560842109"
-           data-ad-format="auto"></ins>
-      <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
+        <!-- allblogs-base -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-6195276590359835"
+             data-ad-slot="2560842109"
+             data-ad-format="auto"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      <!-- google add sense -->
 
-        <!-- add sense -->
       </div> <!-- ./container end -->
     </section> <!-- ./Blog Post container end-->
 

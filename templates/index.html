@@ -1,9 +1,6 @@
-{% extends 'base/base.html' %}
-{% load staticfiles %}
-        {% block content %}
-    
-
-    <section id="home" class="scroll-section root-sec grey lighten-5 home-wrap">
+{% extends 'base/base1.html' %}
+{% block maincontent %}
+<section id="home" class="scroll-section root-sec grey lighten-5 home-wrap">
       <div class="sec-overlay">
         <div class="container">
           <div class="row">
@@ -11,11 +8,10 @@
               <div class="home-inner">
                   <div class="center-align home-content">
                     <h1 class="home-title">HI! I'm <span>Kd Johar</span></h1>
-                    <h2 class="home-subtitle">Python developer</h2>
-                    <a href="{% url 'blogs' %}" class="btn waves-effect waves-light btn-large brand-bg white-text regular-text">My blogs <i class="mdi-content-send left"></i>
-                    </a>
-                    <a href="{% url 'contact' %}" class="btn waves-effect waves-light btn-large brand-bg white-text regular-text">Contact Me <i class="mdi-content-send left"></i>
-                    </a>
+                    <h2 class="home-subtitle">Python Developer</h2>
+                    <a href="{% url 'blogs' %}" class="btn waves-effect waves-light btn-large brand-bg white-text regular-text">My Blogs
+                        <i class="mdi-editor-mode-edit left"></i></a>
+
                   </div>
               </div>
             </div>
@@ -25,7 +21,7 @@
         <div class="section-call-to-area">
           <div class="container">
             <div class="row">
-              <a href="#about" class="btn-floating btn-large button-middle call-to-about section-call-to-btn animated btn-up btn-hidden" data-section="#about">
+              <a href="index.html#about" class="btn-floating btn-large button-middle call-to-about section-call-to-btn animated btn-up btn-hidden" data-section="#about">
                 <i class="mdi-navigation-expand-more"></i>
               </a>
             </div>
@@ -45,7 +41,7 @@
             <div class="col-sm-12 col-md-4">
               <div class="person-about">
                 <h3 class="about-subtitle">My Story</h3>
-                <p style="margin-bottom: 0px;">Hello, I’m a Karandeep Singh Johar.I am pursuing M.Tech in Information Technology from IIPS,DAVV Indore.<br />
+                 <p style="margin-bottom: 0px;">Hello, I’m a Karandeep Singh Johar.I am pursuing M.Tech in Information Technology from IIPS,DAVV Indore.<br />
                 Some hashtags that defines me:- </p>
                 <ul>
                     <li>#CanComeUpWithTheUnusualAndUnexpected</li>
@@ -56,9 +52,9 @@
                     <li>#HateStudying</li>
                     <li>#Lazy</li>
                 </ul>
-                <!--
-                <a class="waves-effect waves-light btn-large brand-bg white-text"><i class="mdi-content-archive left"></i> Download Resume</a>
-                -->
+                  <br />
+                <a class="waves-effect waves-light btn-large brand-bg white-text" href="https://www.dropbox.com/s/yrcwc2b6klmhxcx/kd_resume.docx?dl=0" target="_blank">
+                    <i class="mdi-editor-attach-file left"></i>My Resume</a>
               </div>
             </div>
             <!-- about me description -->
@@ -75,7 +71,6 @@
                 <h3 class="about-subtitle">Personal Information</h3>
                 <h5><span>Name :</span> Karandeep Singh Johar</h5>
                 <h5><span>Age :</span> 23 Years</h5>
-                <!--<h5><span>Phone :</span> +0123456789</h5>-->
                 <h5><span>Email :</span> kdjohar91@gmail.com</h5>
                 <h5><span>Address :</span> Indore, India</h5>
               </div>
@@ -100,7 +95,6 @@
                   <li>
                     <a href="https://github.com/KdJohar" class="btn-floating waves-effect waves-light white" target="_blank"><i class="fa fa-github"></i></a>
                   </li>
-                  
                 </ul>
               </div>
             </div>
@@ -113,7 +107,9 @@
     </section>
     <!-- #about Section end -->
 
-      <section id="education" class="root-sec grey lighten-5 padd-tb-120 education-wrap">
+    <!-- Resume Section start -->
+    <section id="resume" class="scroll-section ">
+      <section id="education" class="root-sec white lighten-5 padd-tb-120 education-wrap">
         <div class="container">
           <div class="row">
             <div class="education-inner">
@@ -122,7 +118,7 @@
                   <div class="clearfix section-head education-text">
                     <div class="col-sm-12">
                       <h2 class="title">education</h2>
-                      	
+
                     </div>
                   </div>
                   <div class="col-lg-12">
@@ -130,7 +126,7 @@
                       <div class="row">
                         <div id="educationSlider" class="clearfix card-element-wrapper">
 
-                        <!-- single education -->
+                         <!-- single education -->
                           <div class="col-sm-4 single-card-box wow fadeInUpSmall" data-wow-duration=".7s">
                             <div class="card">
                               <div class="card-image waves-effect waves-block waves-light">
@@ -215,10 +211,7 @@
     </section>
     <!-- #resume Section end -->
 
-    
-
-    
-    <!-- Blog Section end -->
+      <!-- Blog Section end -->
     <section id="blog" class="scroll-section root-sec grey lighten-5 padd-tb-120 blog-wrap">
       <div class="container">
         <div class="row">
@@ -228,11 +221,10 @@
                 <div class="clearfix section-head blog-text">
                   <div class="col-sm-10">
                     <h2 class="title">Blogs</h2>
-
                   </div>
                 </div>
                 <div class="clearfix card-element-wrapper" id="blog-posts">
-                    {% for blog in blogs %}
+                  {% for blog in blogs %}
                   <article class="col-sm-6 col-md-4 single-card-box single-post">
                   <div class="card">
                     <div class="card-image">
@@ -255,7 +247,6 @@
                   </div>
                 </article> <!--./single post-->
                     {% endfor %}
-
                 </div>
                 <div class="clearfix left-align">
                   <div class="col-sm-12">
@@ -267,8 +258,15 @@
           </div>
         </div>
       </div> <!-- ./container -->
+    <div class="section-call-to-area">
+        <div class="container">
+          <div class="row">
+            <a href="index.html#home" class="btn-floating btn-large button-middle call-to-home section-call-to-btn animated btn-up btn-hidden" data-section="#home">
+              <i class="mdi-navigation-expand-less"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
-    <!-- #blog Section end -->
 
-    <!-- Footer Section end -->
-   {% endblock %}
+{% endblock %}
