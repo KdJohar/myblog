@@ -31,9 +31,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/templates/base/base.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/templates/base/preloader.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/templates/base/sidebar.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base/navigation.html" afterPath="$PROJECT_DIR$/templates/base/navigation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base/switch.html" afterPath="$PROJECT_DIR$/templates/base/switch.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myblog/urls.py" afterPath="$PROJECT_DIR$/myblog/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blogs/views.py" afterPath="$PROJECT_DIR$/blogs/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -100,10 +97,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="switch.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="switch.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base/switch.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.6107383">
+            <state vertical-scroll-proportion="-26.666666">
               <caret line="40" column="177" selection-start-line="40" selection-start-column="177" selection-end-line="40" selection-end-column="177" />
               <folding />
             </state>
@@ -120,11 +117,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blogs/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.62025315">
+              <caret line="101" column="4" selection-start-line="101" selection-start-column="4" selection-end-line="101" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -133,8 +130,8 @@
       <file leaf-file-name="io.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/io.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.851851">
-              <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
+            <state vertical-scroll-proportion="-11.518518">
+              <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
               <folding>
                 <element signature="e#1492#1524#0#HTML" expanded="true" />
               </folding>
@@ -193,8 +190,8 @@
         <option value="$PROJECT_DIR$/myblog/settings.py" />
         <option value="$PROJECT_DIR$/myblog/urls.py" />
         <option value="$PROJECT_DIR$/templates/base/navigation.html" />
-        <option value="$PROJECT_DIR$/templates/io.html" />
         <option value="$PROJECT_DIR$/templates/base/switch.html" />
+        <option value="$PROJECT_DIR$/templates/io.html" />
         <option value="$PROJECT_DIR$/blogs/views.py" />
       </list>
     </option>
@@ -992,10 +989,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base/switch.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-26.666666">
+          <caret line="40" column="177" selection-start-line="40" selection-start-column="177" selection-end-line="40" selection-end-column="177" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/io.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.851851">
-          <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
+        <state vertical-scroll-proportion="-11.518518">
+          <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
           <folding>
             <element signature="e#1492#1524#0#HTML" expanded="true" />
           </folding>
@@ -1004,16 +1009,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/blogs/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base/switch.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6107383">
-          <caret line="40" column="177" selection-start-line="40" selection-start-column="177" selection-end-line="40" selection-end-column="177" />
+        <state vertical-scroll-proportion="0.62025315">
+          <caret line="101" column="4" selection-start-line="101" selection-start-column="4" selection-end-line="101" selection-end-column="4" />
           <folding />
         </state>
       </provider>
