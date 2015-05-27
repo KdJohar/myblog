@@ -10,6 +10,7 @@ from django.conf import settings
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'blogs.views.index', name='home'),
+    url(r'^io15$', 'blogs.views.io15', name='io15'),
     url(r'^blogs/$', 'blogs.views.blogs', name='blogs'),
     url(r'^blogs/(?P<slug>[\w-]+)/$', 'blogs.views.blog_view', name='blog_view'),
     url(r'^blogs-category/(?P<slug>[\w-]+)/$', 'blogs.views.category_view', name='category_view'),

@@ -10,7 +10,6 @@ def index(request):
 
     blogs = Blogs.objects.all().filter(publish=True)[:3]
     categories = Categories.objects.all()
-    url = request.get_full_path()
     page_title = 'Home'
     meta_keywords = 'kd Johar, kd, johar, KDJOHAR, KD JOHAR, KD, Karan, Karandeep Singh Johar, Karandeep Singh'
     meta_description = 'A site by Kd Johar, devoted to his Learning in programming.'
@@ -23,7 +22,6 @@ def blogs(request):
 
     blogs = Blogs.objects.all().filter(publish=True)
     categories = Categories.objects.all()
-    url = request.get_full_path()
     page_title = 'all blogs'
     title = 'blogs'
     recent_blogs = Blogs.objects.filter(publish=True)[:5]
@@ -37,7 +35,6 @@ def blogs(request):
 
 def category_view(request, slug):
     categories = Categories.objects.all()
-    url = request.get_full_path()
     category = get_object_or_404(Categories, slug=slug)
     recent_blogs = Blogs.objects.filter(publish=True)[:5]
     page_title = 'category'+'-'+category.name
@@ -51,7 +48,6 @@ def category_view(request, slug):
 
 def blog_view(request, slug):
     categories = Categories.objects.all()
-    url = request.get_full_path()
     recent_blogs = Blogs.objects.filter(publish=True)[:5]
     blog = get_object_or_404(Blogs, slug=slug)
     page_title = 'blog'+'|'+ ' '+ blog.title
@@ -80,15 +76,12 @@ def handler500(request):
 def contact(request):
 
     blogs = Blogs.objects.all().filter(publish=True)[:3]
-    url = request.get_full_path()
     categories = Categories.objects.all()
     page_title = 'Contact'
     meta_keywords = 'Contact Kd johar'
 
     meta_description = 'Contact Kd Johar'
     no = blogs.count()
-
-
     return render_to_response('contact.html', locals(), context_instance = RequestContext(request))
 
 class blog_sitemap(Sitemap):
@@ -100,3 +93,14 @@ class blog_sitemap(Sitemap):
 
     def lastmod(self, obj):
         return obj.date
+
+def io15(request):
+
+    blogs = Blogs.objects.all().filter(publish=True)[:3]
+    categories = Categories.objects.all()
+    page_title = 'Google I/O 15'
+    meta_keywords = 'google i/o, google i/o live streaming'
+    meta_description = 'Watch google i/o15 here live streaming.'
+    no = blogs.count()
+
+    return render_to_response('io.html', locals(), context_instance = RequestContext(request))

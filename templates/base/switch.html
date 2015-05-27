@@ -3,42 +3,42 @@
           <p class="brand-text">Share This:</p>
 
           <div class="menu-select" title="Share this on facebook">
-              <a class="waves-effect waves-light btn" href="https://www.facebook.com/sharer/sharer.php?u={{ url }}">
+              <a class="waves-effect waves-light btn" href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri|urlencode }}">
                   <i class="fa fa-facebook-official left"></i>Facebook</a>
 
           </div>
           <div class="menu-select" title="Share this on google+">
-              <a class="waves-effect waves-light btn" href="{{ url }}">
+              <a class="waves-effect waves-light btn" href="https://plus.google.com/share?url={{ request.build_absolute_uri|urlencode }}">
                   <i class="fa fa-google-plus-square left"></i>google+</a>
 
 
           </div>
           <div class="menu-select" title="Share this on twitter">
-              <a class="waves-effect waves-light btn" href="https://twitter.com/share?url={{ url }}&via=kdjohar91">
+              <a class="waves-effect waves-light btn" href="https://twitter.com/share?url={{ request.build_absolute_uri|urlencode }}&via=kdjohar91">
                   <i class="fa fa-twitter-square left"></i>twitter</a>
 
 
           </div>
 
           <div class="menu-select" title="Share this on linked in">
-              <a class="waves-effect waves-light btn" href="https://www.linkedin.com/cws/share?url={{ url }}">
+              <a class="waves-effect waves-light btn" href="https://www.linkedin.com/cws/share?url={{ request.build_absolute_uri|urlencode }}">
                   <i class="fa fa-linkedin-square left"></i>linked in</a>
 
 
           </div>
           <div class="menu-select" title="Share this on reddit">
-              <a class="waves-effect waves-light btn" href="http://www.reddit.com/submit?url={{ url }}">
+              <a class="waves-effect waves-light btn" href="http://www.reddit.com/submit?url={{ request.build_absolute_uri|urlencode }}">
                   <i class="fa fa-reddit-square left"></i>Reddit</a>
 
           </div>
           <div class="menu-select" title="Share this on whatsapp">
-              <a class="waves-effect waves-light btn" href="whatsapp://send?text={{ url }}" data-action="share/whatsapp/share">
+              <a class="waves-effect waves-light btn" href="whatsapp://send?text={{ request.build_absolute_uri|urlencode }}" data-action="share/whatsapp/share">
                   <i class="fa fa-whatsapp left"></i>whatsapp</a>
 
 
           </div>
           <div class="menu-select" title="Share this on email">
-              <a class="waves-effect waves-light btn" href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site {{ url }}."
+              <a class="waves-effect waves-light btn" href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site {{ request.build_absolute_uri|urlencode }}."
    title="Share by Email">
                   <i class="fa fa-share left"></i>email</a>
 
