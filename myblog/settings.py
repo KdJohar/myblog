@@ -10,21 +10,15 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 import django.conf.global_settings as DEFAULT_SETTINGS
+
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+
 TEMPLATE_CONTEXT_PROCESSORS = DEFAULT_SETTINGS.TEMPLATE_CONTEXT_PROCESSORS
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '#8c84609&ilve82t@kz#h%d-2zs)0x4d%%kq5hbvc*_7963pt4'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
-TEMPLATE_DEBUG = False
-
-ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -73,12 +67,7 @@ WSGI_APPLICATION = 'myblog.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
@@ -98,17 +87,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
-
-TEMPLATE_CONTEXT_PROCESSORS = (
-    "django.contrib.auth.context_processors.auth",
-    "django.core.context_processors.request",
-    "django.core.context_processors.debug",
-    "django.core.context_processors.i18n",
-    "django.core.context_processors.media",
-    "django.core.context_processors.static",
-    "django.core.context_processors.tz",
-    "django.contrib.messages.context_processors.messages",
-)
 
 CKEDITOR_UPLOAD_PATH = "editor_uploads/"
 CKEDITOR_IMAGE_BACKEND = 'pillow'
@@ -141,12 +119,13 @@ WPADMIN = {
 }
 
 STATIC_URL = '/static/'
-MEDIA_ROOT = '/Users/kd/projects/django/media/'
+
 MEDIA_URL = ''
-import os
-STATIC_ROOT = '/Users/kd/projects/django/static/'
-STATICFILES_DIRS = os.path.join(os.path.dirname(__file__), '..', 'static').replace('\\','/'),
-TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), '..', 'templates').replace('\\','/'),)
+
+STATICFILES_DIRS = os.path.join(
+    os.path.dirname(__file__), '..', 'static').replace('\\', '/'),
+TEMPLATE_DIRS = (
+    os.path.join(os.path.dirname(__file__), '..', 'templates').replace('\\', '/'),)
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
@@ -157,3 +136,13 @@ CACHES = {
         }
     }
 }
+
+try:
+    from local_settings import *
+except ImportError:
+    pass
+try:
+    from production_settings import *
+except ImportError:
+    pass
+
