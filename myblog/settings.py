@@ -141,10 +141,10 @@ WPADMIN = {
 }
 
 STATIC_URL = '/static/'
-MEDIA_ROOT = '/home/kd/projects/django/media/'
+MEDIA_ROOT = '/Users/kd/projects/django/media/'
 MEDIA_URL = ''
 import os
-STATIC_ROOT = '/home/kd/projects/django/static/'
+STATIC_ROOT = '/Users/kd/projects/django/static/'
 STATICFILES_DIRS = os.path.join(os.path.dirname(__file__), '..', 'static').replace('\\','/'),
 TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), '..', 'templates').replace('\\','/'),)
 CACHES = {

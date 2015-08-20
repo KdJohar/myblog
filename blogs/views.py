@@ -93,15 +93,4 @@ class blog_sitemap(Sitemap):
 
     def lastmod(self, obj):
         return obj.date
-
-def io15(request):
-
-    blogs = Blogs.objects.all().filter(publish=True)[:3]
-    categories = Categories.objects.all()
-    page_title = 'Google I/O 15'
-    title = 'Google I/O 15'
-    meta_keywords = 'google i/o, google i/o live streaming'
-    meta_description = 'Watch google i/o15 here live streaming.'
-    no = blogs.count()
-
-    return render_to_response('io.html', locals(), context_instance = RequestContext(request))
+        
