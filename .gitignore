@@ -2,3 +2,4 @@
 *.sqlite
 *.pyc
 *.xml
+local_settings.py
