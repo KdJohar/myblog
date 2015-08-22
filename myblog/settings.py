@@ -26,7 +26,7 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     # other finders..
-    'compressor.finders.CompressorFinder',
+    'pipeline.finders.PipelineFinder',
 )
 
 INSTALLED_APPS = (
@@ -40,9 +40,81 @@ INSTALLED_APPS = (
     'ckeditor',
     'blogs',
     'tagging',
-    "compressor",
+    'pipeline',
     'django.contrib.sitemaps',
 )
+
+STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
+PIPELINE_CSS_COMPRESSOR = 'pipeline.compressors.cssmin.CSSMinCompressor'
+PIPELINE_CSSMIN_BINARY = 'cssmin'
+PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.slimit.SlimItCompressor'
+PIPELINE_ENABLED = True
+
+PIPELINE_CSS = {
+    'style': {
+        'source_filenames': (
+            'assets/css/normalize.css',
+            'assets/font/font-awesome/css/font-awesome.min.css',
+            'assets/libs/materialize/css/materialize.min.css',
+            'assets/css/bootstrap.css',
+            'assets/css/animate.min.css',
+            'assets/libs/sweetalert/sweet-alert.css',
+            'assets/libs/owl-carousel/owl.carousel.css',
+            'assets/libs/owl-carousel/owl.transitions.css',
+            'assets/libs/owl-carousel/owl.theme.css',
+            'assets/css/main.css',
+            'assets/css/responsive.css',
+            'assets/css/colors/color1.css',
+        ),
+        'output_filename': 'global.css',
+        'variant' : 'datauri',
+    },
+    'style2': {
+        'source_filenames': (
+            'assets/css/normalize.css',
+            'assets/font/font-awesome/css/font-awesome.min.css',
+            'assets/libs/materialize/css/materialize.min.css',
+            'assets/css/bootstrap.css',
+            'assets/css/animate.min.css',
+            'assets/libs/sweetalert/sweet-alert.css',
+            'assets/libs/owl-carousel/owl.carousel.css',
+            'assets/libs/owl-carousel/owl.transitions.css',
+            'assets/libs/owl-carousel/owl.theme.css',
+            'assets/css/main.css',
+            'assets/css/responsive.css',
+            'assets/css/colors/color1.css',
+            'assets/css/blog.css',
+        ),
+        'output_filename': 'global2.css',
+        'variant' : 'datauri',
+    }
+}
+
+PIPELINE_JS = {
+    'scripts': {
+        'source_filenames': (
+            'assets/js/jquery.easing.1.3.js',
+            'assets/js/detectmobilebrowser.js',
+            'assets/js/isotope.pkgd.min.js',
+            'assets/js/wow.min.js',
+            'assets/js/waypoints.js',
+            'assets/js/jquery.counterup.min.js',
+            'assets/js/jquery.nicescroll.min.js',
+            'assets/js/gmaps.js',
+            'assets/libs/owl-carousel/owl.carousel.min.js',
+            'assets/libs/materialize/js/materialize.min.js',
+            'assets/libs/jwplayer/jwplayer.js',
+            'assets/libs/sweetalert/sweet-alert.min.js',
+            'assets/js/common.js',
+            'assets/js/main.js',
+            'assets/js/rrssb.js',
+
+        ),
+        'output_filename': 'scripts.js',
+        'variant' : 'datauri',
+    }
+}
+
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.gzip.GZipMiddleware',

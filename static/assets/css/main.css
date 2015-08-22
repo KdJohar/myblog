@@ -709,9 +709,6 @@ header.nav.hide-menu {
 /* 6. Skills Section Styles
  ----------------------------------- */
 
-#skill {
-    background: url('../../images/skills-bg.jpg') no-repeat scroll center center / cover;
-}
 
 #skill .sec-overlay {
     background: rgba(255,255,255, .92);
@@ -1317,10 +1314,6 @@ header.nav.hide-menu {
 /* --------------------------------- */
 /* 12. Fun Facts Styles
  ----------------------------------- */
-
-#funfacts {
-    background: url('../../images/fun-facts-bg.jpg') no-repeat scroll center center / cover;
-}
 
 #funfacts .sec-inner {
     background: rgba(255,255,255, .92);
