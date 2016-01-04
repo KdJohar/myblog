@@ -12,7 +12,7 @@
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
-    <orderEntry type="jdk" jdkName="Python 2.7.6 virtualenv at ~/projects/vir/myblog" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 2.7.10 virtualenv at ~/projects/vir/myblog" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TemplatesService">
